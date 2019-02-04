@@ -36,7 +36,8 @@ public class LoginTests {
     @Test
     public void login1(){
         login();
-        Assert.assertEquals(driver.getTitle(), "Web Orders");
+        String title = driver.getTitle();
+        Assert.assertEquals(title, "Web Orders");
 
     }
 
@@ -44,7 +45,8 @@ public class LoginTests {
     public void logOutTest(){
         login();
         driver.findElement(By.id("ctl00_logout")).click();
-        Assert.assertEquals(driver.getTitle(), "Web Orders Login");
+        String title = driver.getTitle();
+        Assert.assertEquals(title, "Web Orders Login");
 
     }
 
